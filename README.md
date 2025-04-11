@@ -9,21 +9,20 @@ technical interviews!
 solving LeetCode problems using TypeScript
 
 ---
-
-    <a href="https://t.me/KirillGrant" target="_blank">
+ <a href="https://t.me/KirillGrant" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" 
     width="20" height="20" alt="Telegram" />
     <span style="color: #000000;"> t.me/KirillGrant</span></a>
 
-<!-- <div align="center"> -->
-`    <a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="20" height="20" alt="LeetCode Profile" /><span style="color: #000000;"> webDotG</span></a>`
-<!-- </div> -->
+
+<a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="20" height="20" alt="LeetCode Profile" /><span style="color: #000000;"> webDotG</span></a>
+
 
 ---
 
 ## Project 
 
-<code>>This is a hands-on space where I : </code
+<code>>This is a hands-on space where I : </code>
 
 > [!TIP]  
 > ✅ LeetCode challenges to build problem-solving expertise.
