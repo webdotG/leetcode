@@ -5,7 +5,7 @@
 
 # LeetCode Interview Prep
 personal project dedicated to mastering technical interviews! 
-solving LeetCode problems using **TypeScript**
+solving LeetCode problems using TypeScript
 
 ---
 
