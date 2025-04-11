@@ -115,13 +115,102 @@ function romanToInt(s) {
     return result;
 }
 console.log('Roman To Integer input s = "MCMXCIV" : ', romanToInt("MCMXCIV"));
+//
+// UNIQ BLOCK ========>>==============??=================>>==================??===============>>=======================??===>>===
+//
+//26. Remove Duplicates from Sorted Array------------------------------------------------------------------------------------------
+// Нужно "удалить" дубликаты на месте (in-place), 
+//  чтобы каждый уникальный элемент встречался только один раз, 
+//  сохраняя относительный порядок элементов. 
+// Вернуть количество уникальных элементов k.
+// writeIndex = 1 
+// i = 1 i < nums.length.
+// сравнить nums[i] с nums[i - 1].
+//  если не равны, записпть
+//      nums[i] на позицию writeIndex 
+//      и увеличивай writeIndex.
+// вернуть writeIndex.
+function removeDuplicates(nums) {
+    if (nums.length === 0)
+        return 0;
+    if (nums.length === 1)
+        return 1;
+    let writeIndex = 1;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[i - 1]) {
+            nums[writeIndex] = nums[i];
+            writeIndex++;
+        }
+    }
+    return writeIndex;
+}
+;
+console.log('Уникальных Чисел  ДО 1 Повторения [0,0,1,1,1,1,2,3,3,444,555,66,7777777] ', removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3, 444, 555, 66, 7777777]));
+//80. Remove Duplicates from Sorted Array II-------------------------------------------------------------------------------
+//Чем отличается от задачи 26?
+//Ключевое различие:
+//Теперь мы не просто пропускаем все дубликаты после первого, 
+//а считаем, сколько раз число уже встречалось, 
+//и разрешаем до двух раз.
+// function removeDuplicatesTwoI(nums: number[]): number {
+//     let i = 2;
+//     let k = 2;
+//     while (i < nums.length) {
+//         if (nums[k - 2] !== nums[i]) {
+//             nums[k++] = nums[i];
+//         }
+//         i++;
+//     }
+//     return k;
+// };
+function removeDuplicatesTwo(nums) {
+    if (nums.length === 0)
+        return 0;
+    if (nums.length <= 2)
+        return nums.length;
+    let writeIndex = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (writeIndex < 2) {
+            //nums[writeIndex] по тому что работает "налету/in-place"
+            nums[writeIndex] = nums[i];
+            writeIndex++;
+        }
+        else {
+            if (nums[i] !== nums[writeIndex - 2]) {
+                nums[writeIndex] = nums[i];
+                writeIndex++;
+            }
+        }
+    }
+    return writeIndex;
+}
+;
+console.log('Уникальных Чисел  ДО 2 Повторений[0,0,1,1,1,1,2,3,3,444,555,66,7777777]', removeDuplicatesTwo([0, 0, 1, 1, 1, 1, 2, 3, 3, 444, 555, 66, 777777]));
+// SPEC UNIQ SORT
+function removeDuplicatesGeneral(nums, maxDuplicates) {
+    if (nums.length === 0)
+        return 0;
+    if (nums.length <= maxDuplicates)
+        return nums.length;
+    let writeIndex = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (writeIndex < maxDuplicates || nums[i] !== nums[writeIndex - maxDuplicates]) {
+            nums[writeIndex] = nums[i];
+            writeIndex++;
+        }
+    }
+    return writeIndex;
+}
+console.log('Уникальных Чисел  ДО N=4 Повторений[0,0,1,1,1,1,2,3,3,444,555,66,77777]', removeDuplicatesGeneral([0, 0, 1, 1, 1, 1, 2, 3, 3, 444, 555, 66, 777777], 4));
+//
+// REMOVE BLOCK ========>>==============??=================>>==================??===============>>=======================??===>>===
+//
 //Удаление постов с определённым тегом (например, val — ID спама) из списка ленты для улучшения пользовательского опыта.
 // Обработка данных профиля:
-//     Удаление устаревших записей (например, val — ID старого опыта работы) из списка в профиле.
+// Удаление устаревших записей (например, val — ID старого опыта работы) из списка в профиле.
 // удаление значений из обьекта 
 // если это число не равно тому что ищем 
-// то записываем на новое место 
-// и 
+// то записываем на новое место  
 function removeElement(nums, val) {
     let k = 0; // Указатель на позицию для элементов != val
     for (let i = 0; i < nums.length; i++) {

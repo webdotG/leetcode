@@ -7,7 +7,7 @@ function expect(val) {
                 return true;
             }
             else {
-                console.log('Not Equal');
+                // console.log('Not Equal')
                 // throw new Error("Not Equal")
                 return false;
             }
@@ -17,7 +17,7 @@ function expect(val) {
                 return true;
             }
             else {
-                console.log('Equal');
+                // console.log('Equal')
                 // throw new Error("Equal")
                 return false;
             }
