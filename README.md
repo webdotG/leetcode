@@ -9,8 +9,6 @@ solving LeetCode problems using TypeScript
 
 ---
 
-
-
 <a href="https://t.me/KirillGrant" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="20" height="20" alt="telegram" /> t.me/KirillGrant</a>
 <a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="20" height="20" alt="leetcode" /> webDotG</a>
 
@@ -19,7 +17,12 @@ solving LeetCode problems using TypeScript
 ## Project Overview
 
 This is a hands-on space where I:
-- Tackle LeetCode challenges to build problem-solving expertise.
-- Write clean, efficient TypeScript code to implement algorithms and data structures.
-- Document my progress and solutions as study notes for future reference.
 
+> [!TIP]  
+> ✅ Tackle LeetCode challenges to build problem-solving expertise.
+
+> [!NOTE]  
+> ✅ Write clean, efficient TypeScript code to implement algorithms and data structures.
+
+> [!TIP]  
+> ✅ Document my progress and solutions as study notes for future reference.
