@@ -1,5 +1,17 @@
 {
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "My LeetCode in TypeScript",
+  "main": "150_compiler_ts/150_q_ts/150.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node 150_compiler_ts/150_q_ts/150.js"
+  },
+  "keywords": ["leetcode", "typescript", "interview-prep"],
+  "author": "Твое Имя (t.me/KirillGrant)",
+  "license": "UNLICENSED",
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.0.0"
   }
 }
