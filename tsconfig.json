@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Версия JavaScript для компиляции
+    "module": "commonjs", // Формат модулей (можно изменить на "ESNext" для браузеров)
+    "outDir": "150_compiler_ts", // Куда складывать скомпилированные .js файлы
+    "rootDir": ".", // Где искать .ts файлы
+    "strict": true, // Строгая типизация
+    "esModuleInterop": true, // Для совместимости с модулями
+    "skipLibCheck": true // Пропуск проверки библиотек
+  },
+  "include": ["*.ts", "scripts/*.ts", "node_modules/150.ts", "150_q_ts/class.ts"], // Какие файлы компилировать
+  "exclude": ["node_modules"] // Что игнорировать
+}
