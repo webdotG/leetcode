@@ -21,8 +21,8 @@ This is a hands-on space where I:
 > [!TIP]  
 > ✅ Tackle LeetCode challenges to build problem-solving expertise.
 
-> [!NOTE]  
+> [!IMPORTANT]  
 > ✅ Write clean, efficient TypeScript code to implement algorithms and data structures.
 
-> [!IMPORTANT] 
+> [!NOTE] 
 > ✅ Document my progress and solutions as study notes for future reference.
