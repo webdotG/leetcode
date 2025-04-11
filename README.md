@@ -14,9 +14,9 @@ solving LeetCode problems using TypeScript
     width="45" height="45" alt="Telegram" />
     <span style="color: #000000;"></span></a>
 
-
+<div padding="25px">
 <a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="45" height="45" alt="LeetCode Profile" /><span style="color: #000000;"></span></a>
-
+</div>
 
 ---
 
