@@ -24,5 +24,5 @@ This is a hands-on space where I:
 > [!NOTE]  
 > ✅ Write clean, efficient TypeScript code to implement algorithms and data structures.
 
-> [!TIP]  
+> [!IMPORTANT] 
 > ✅ Document my progress and solutions as study notes for future reference.
