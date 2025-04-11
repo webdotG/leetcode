@@ -36,15 +36,3 @@ function mergeWileIf(nums1: number[], m: number, nums2: number[], n: number): vo
         p--;
     }
 }
-// Тест
-let nums1 = [1, 2, 3, 0, 0, 0];
-let m = 3;
-let nums2 = [2, 5, 6];
-let n = 3;
-console.log("mergeMetod:", [...nums1], nums1, m, nums2, n);
-
-console.log("mergeMetod:", nums1);
-nums1 = [1, 2, 3, 0, 0, 0]; // Сброс массива
-console.log("mergeWileIf:", [...nums1]);
-mergeWileIf(nums1, m, nums2, n);
-console.log("mergeWileIf:", nums1);
