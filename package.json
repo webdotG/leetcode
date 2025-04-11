@@ -2,14 +2,14 @@
   "name": "leetcode",
   "version": "1.0.0",
   "description": "My LeetCode in TypeScript",
-  "main": "150_compiler_ts/150_q_ts/150.js",
+  "main": "dist/150_1_ts/150.js",  
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "start": "node 150_compiler_ts/150_q_ts/150.js"
+    "build": "tsc",               
+    "watch": "tsc --watch",       
+    "start": "node dist/150_1_ts/150.js"  
   },
   "keywords": ["leetcode", "typescript", "interview-prep"],
-  "author": "Твое Имя (t.me/KirillGrant)",
+  "author": "Кирилл Грант (t.me/KirillGrant)",
   "license": "UNLICENSED",
   "devDependencies": {
     "typescript": "^5.0.0"

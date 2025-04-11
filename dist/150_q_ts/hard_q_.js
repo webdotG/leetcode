@@ -86,6 +86,8 @@ function mergeListHelper(lists, left, right) {
 // Вспомогательные функции для локального тестирования
 // Определение ListNode (только для локального запуска, на LeetCode не нужно)
 class ListNode {
+    val;
+    next;
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val);
         this.next = (next === undefined ? null : next);
@@ -134,6 +136,8 @@ runTests2();
 //words = ["oath","pea","eat","rain"] → ["eat","oath"].
 // 150_q_ts/212_wordSearchII_fast.ts
 class TrieNode {
+    nxt;
+    word;
     constructor() {
         this.nxt = new Map(); // Дочерние узлы
         this.word = null; // Слово, если узел завершает слово

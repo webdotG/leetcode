@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "outDir": "150_compiler_ts",
-    "rootDir": ".",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "target": "ESNext",          // Целевая версия JavaScript
+    "module": "CommonJS",        // Модульная система для Node.js
+    "outDir": "./dist",          // Куда складывать скомпилированные файлы
+    "rootDir": ".",              // Корневая директория для исходных файлов
+    "strict": true,              // Строгая проверка типов
+    "esModuleInterop": true,     // Улучшает совместимость с CommonJS
+    "skipLibCheck": true         // Пропускает проверку типов в файлах .d.ts
   },
   "include": [
-    "150_q_ts/*.ts",
-    "scripts/*.ts"
+    "150_q_ts/**/*.ts",         // Включает все .ts файлы в 150_1_ts и её подпапках
+    "base_ts/**/*.ts"           // Включает все .ts файлы в base_ts и её подпапках
   ],
   "exclude": [
-    "node_modules",
-    "150_compiler_ts"
+    "node_modules",             // Исключает node_modules
+    "dist"                      // Исключает папку с результатами компиляции
   ]
 }
