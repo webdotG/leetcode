@@ -11,8 +11,8 @@ solving LeetCode problems using **TypeScript**
 
 
 
-- **Telegram**: <a href="https://t.me/KirillGrant" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="20" height="20" alt="telegram" /> t.me/KirillGrant</a>
-- **LeetCode**: <a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="20" height="20" alt="leetcode" /> webdotg</a>
+<a href="https://t.me/KirillGrant" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="20" height="20" alt="telegram" /> t.me/KirillGrant</a>
+<a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="20" height="20" alt="leetcode" /> webDotG</a>
 
 ---
 
