@@ -27,9 +27,9 @@ solving LeetCode problems using TypeScript
 <a href="https://t.me/KirillGrant" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" 
     width="45" height="45" alt="Telegram" />
-    <span style="color: #000000;"></span>
+    <span color="#000000">KirillGrant</span>
 </a>
 
 <div padding-top="25px">
-<a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="45" height="45" alt="LeetCode Profile" /><span style="color: #000000;"></span></a>
+<a href="https://leetcode.com/u/webdotg/" target="_blank"><img src="https://leetcode.com/apple-touch-icon-114x114.png" width="45" height="45" alt="LeetCode Profile" /><span color="#000000">webDotG</span></a>
 </div>

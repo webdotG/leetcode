@@ -15,7 +15,7 @@ function map(arr, fn) {
     return newArr;
 }
 const fn = (n) => n + 1;
-console.log('SUM К Каждому Элементу [1,3,6,9] fn=(n)=> n + 1; ', map([1, 3, 6, 9], fn));
+console.log('MAP К Каждому Элементу [1,3,6,9] fn=(n)=> n + 1; ', map([1, 3, 6, 9], fn));
 function filter(arr, fn2) {
     const newArr = [];
     for (let i = 0; i < arr.length; i++) {
@@ -39,6 +39,13 @@ function reduce(nums, fn3, init) {
 ;
 const fn3 = (accum, curr) => accum + curr;
 console.log('REDUCE К Каждому Элементу Начиная с init=0 [1,3,6,9] fn = sum(accum, curr)  accum + curr; ', reduce([1, 3, 6, 9], fn3, 0));
+function compose(functions) {
+    return function (x) {
+        return x;
+    };
+}
+;
+console.log('Composition Композит Функций ', compose);
 //169. Majority Element-----------------------------------------------------------------------
 //надо найти мажоритарный элемент 
 // — число, которое встречается больше ⌊n / 2⌋ раз
