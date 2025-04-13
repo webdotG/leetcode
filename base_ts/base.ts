@@ -15,24 +15,39 @@ function map(arr: number[], fn: (n: number, i: number) => number): number[] {
     return newArr
 }
 const fn = ( n:number ):number =>  n + 1; 
-console.log('Преобразование К Каждому Элементу В Массиве [1,3,6,9] fn=(n)=>return n + 1; ', map([1,3,6,9], fn))
+console.log('SUM К Каждому Элементу [1,3,6,9] fn=(n)=>return n + 1; ', map([1,3,6,9], fn))
 
 //2634. Filter Elements from Array -----------------------------------------------------------------------------------
-type Fn = (n: number, i: number) => any
-
-function filter(arr: number[], fn: Fn): number[] {
+type Fn2 = (n: number, i: number) => any
+function filter(arr: number[], fn2: Fn2): number[] {
   const newArr:number[] = []
     
   for(let i = 0; i < arr.length; i++) {
-//     if(fn(arr[i],i)) {
+//     if(fn2(arr[i],i)) {
 //         newArr.push(arr[i])
 //     }
-    fn(arr[i],i) && newArr.push(arr[i])
+    fn2(arr[i],i) && newArr.push(arr[i])
   }
   return newArr
 };
-const fn2 = (n: number):boolean => n > 10
-console.log('Фильтрация К Каждому Элементу В Массиве [10,30,60,90] fn =(n)=> return n > 10 ', map([10,30,60,90], fn))
+const fn2 = (n: number, i: number):boolean => n > 10
+console.log('FILTER К Каждому Элементу [10,30,60,90] fn =(n)=> return n > 10 ', filter([10,30,60,90], fn2))
+
+
+//2626. Array Reduce Transformation-----------------------------------------------------------------------------------------------------
+type Fn3 = (accum: number, curr: number) => number
+function reduce(nums: number[], fn3: Fn3, init: number): number {
+  
+    let result = init
+
+    for(let i = 0; i < nums.length; i++){
+        result = fn3(result, nums[i])
+    }
+    return result
+};
+const fn3 = (accum: number, curr: number):number => accum + curr
+console.log('REDUCE К Каждому Элементу Начиная с init=0 [1,3,6,9] fn = sum(accum, curr) return accum + curr; ', reduce([1,3,6,9], fn3, 0))
+
 
 //169. Majority Element-----------------------------------------------------------------------
  //надо найти мажоритарный элемент 

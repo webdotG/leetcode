@@ -1,7 +1,13 @@
 "use strict";
 console.log('==== BASE ========BASE>>===========BASE??================BASE>>================BASE??===============BASE>>=================BASE======>>');
 //
+//2635. Apply Transform Over Each Element in Array-----------------------------------------------------------------------------------------
 function map(arr, fn) {
+    // const res: number[] = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     res.push(fn(arr[i], i))
+    // }
+    // return res
     const newArr = [];
     for (let i = 0; i < arr.length; i++) {
         newArr[i] = fn(arr[i], i);
@@ -9,7 +15,30 @@ function map(arr, fn) {
     return newArr;
 }
 const fn = (n) => n + 1;
-console.log('Преобразование К Каждому Элементу В Массиве [1,3,6,9] fn=(n)=>return n + 1; ', map([1, 3, 6, 9], fn));
+console.log('SUM К Каждому Элементу [1,3,6,9] fn=(n)=>return n + 1; ', map([1, 3, 6, 9], fn));
+function filter(arr, fn2) {
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        //     if(fn2(arr[i],i)) {
+        //         newArr.push(arr[i])
+        //     }
+        fn2(arr[i], i) && newArr.push(arr[i]);
+    }
+    return newArr;
+}
+;
+const fn2 = (n, i) => n > 10;
+console.log('FILTER К Каждому Элементу [10,30,60,90] fn =(n)=> return n > 10 ', filter([10, 30, 60, 90], fn2));
+function reduce(nums, fn3, init) {
+    let result = init;
+    for (let i = 0; i < nums.length; i++) {
+        result = fn3(result, nums[i]);
+    }
+    return result;
+}
+;
+const fn3 = (accum, curr) => accum + curr;
+console.log('REDUCE К Каждому Элементу Начиная с init=0 [1,3,6,9] fn = sum(accum, curr) return accum + curr; ', reduce([1, 3, 6, 9], fn3, 0));
 //169. Majority Element-----------------------------------------------------------------------
 //надо найти мажоритарный элемент 
 // — число, которое встречается больше ⌊n / 2⌋ раз
