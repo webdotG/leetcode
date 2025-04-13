@@ -1,15 +1,39 @@
 console.log('==== BASE ========BASE>>===========BASE??================BASE>>================BASE??===============BASE>>=================BASE======>>')
 //
+//2635. Apply Transform Over Each Element in Array-----------------------------------------------------------------------------------------
 function map(arr: number[], fn: (n: number, i: number) => number): number[] {
-    const newArr: number[] = []
+        // const res: number[] = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     res.push(fn(arr[i], i))
+    // }
+    // return res
 
+    const newArr: number[] = []
     for(let i = 0; i < arr.length; i++){
         newArr[i] = fn(arr[i], i)
     }
     return newArr
 }
 const fn = ( n:number ):number =>  n + 1; 
-console.log('преобразование к каждому элементу в массиве [1,3,6,9] fn=(n)=>return n + 1; ', map([1,3,6,9], fn))
+console.log('Преобразование К Каждому Элементу В Массиве [1,3,6,9] fn=(n)=>return n + 1; ', map([1,3,6,9], fn))
+
+//2634. Filter Elements from Array -----------------------------------------------------------------------------------
+type Fn = (n: number, i: number) => any
+
+function filter(arr: number[], fn: Fn): number[] {
+  const newArr:number[] = []
+    
+  for(let i = 0; i < arr.length; i++) {
+//     if(fn(arr[i],i)) {
+//         newArr.push(arr[i])
+//     }
+    fn(arr[i],i) && newArr.push(arr[i])
+  }
+  return newArr
+};
+const fn2 = (n: number):boolean => n > 10
+console.log('Фильтрация К Каждому Элементу В Массиве [10,30,60,90] fn =(n)=> return n > 10 ', map([10,30,60,90], fn))
+
 //169. Majority Element-----------------------------------------------------------------------
  //надо найти мажоритарный элемент 
  // — число, которое встречается больше ⌊n / 2⌋ раз
