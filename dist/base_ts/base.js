@@ -60,6 +60,68 @@ function once(fn4) {
         return undefined;
     };
 }
+//2623. Memoize-------------------------------------------------------------------------------------------
+// fnName = "sum"
+// actions = ["call","call","getCallCount","call","getCallCount"]
+// values = [[2,2],[2,2],[],[1,2],[]]
+// Output: [4,4,1,3,2]
+const sum = (a1, b1) => a1 + b1;
+function memoize(fn) {
+    const cache = new Map();
+    return function (...args) {
+        const key = args.join(",");
+        if (cache.has(key)) {
+            return cache.get(key);
+        }
+        const result = fn(...args);
+        cache.set(key, result);
+        return result;
+    };
+}
+console.log('MEMO кэширование результата работы функции с одинаковыми значениями');
+// async function addTwoPromises(promise1: P, promise2: P): P {
+//   return Promise.all([promise1, promise2]).then(([value1, value2]) => value1 + value2)  
+// };
+async function addTwoPromises(promise1, promise2) {
+    const [value1, value2] = await Promise.all([promise1, promise2]);
+    return value1 + value2;
+}
+;
+console.log('PROMISE получение значения двух промисов ');
+//2621. Sleep---------------------------------------------------------------------------------------
+async function sleep(millis) {
+    await new Promise(res => setTimeout(res, millis));
+}
+let t = Date.now();
+sleep(100).then(() => { console.log('PROMISE с задержкой ', Date.now() - t); }); // 100  
+//2715. Timeout Cancellation----------------------------------------------------------------------------
+// function cancellable(fn, args, t): Function {
+//     const timerId = setTimeout(() => fn(...args) ,t)
+//     const cancel = () => clearTimeout(timerId)
+//     return cancel
+// };
+function cancellable(fn, arg, t) {
+    let cancelled = false;
+    const delay = new Promise((resolve) => {
+        setTimeout(() => {
+            if (!cancelled) {
+                const result = fn(...arg);
+                resolve(result);
+            }
+            else {
+                resolve(null);
+            }
+        }, t);
+    });
+    const cancelFn = () => {
+        cancelled = true;
+    };
+    delay.catch(() => { });
+    return cancelFn;
+}
+// const cancelFn = cancellable(doFN, [3,2,9,], 5000);
+// setTimeout(cancelFn, 7000);
+console.log('PROMISE с Задержкой и Отменой ');
 //169. Majority Element-----------------------------------------------------------------------
 //надо найти мажоритарный элемент 
 // — число, которое встречается больше ⌊n / 2⌋ раз

@@ -1,5 +1,27 @@
 console.log('==== 150_Q_ ========150_Q_>>===========150_Q_??================150_Q_>>================150_Q_??===============150_Q_>>=================150_Q_======>>')
 //
+//58. Length of Last Word------------------------------------------------------------------------------------------------------
+// function lengthOfLastWord(s: string): number {
+//     //s.trim() — убирает пробелы в начале и конце.
+//     //split(' ') — разбивает строку на массив слов.
+//     const words = s.trim().split(' '); // 
+//     return words[words.length - 1].length; // Длина последнего слова
+// }
+function lengthOfLastWord(s: string): number {
+    let i = s.length - 1;
+    let length = 0; 
+    // Пропускаю пробелы с конца
+    while (i >= 0 && s[i] === ' ') {
+        i--;
+    }
+    // Считаю длину слова пока не увижу пробел или не кончится строка
+    while (i >= 0 && s[i] !== ' ') {
+        length++;
+        i--;
+    }
+    return length;
+}
+console.log('Посчитать Длину Последнего Слова .luffy is still joyboy. = ', lengthOfLastWord('luffy is still joyboy'))
 //121. Best Time to Buy and Sell Stock
 // Input: prices = [7,1,5,3,6,4]
 // Output: 5
@@ -34,7 +56,7 @@ function maxProfit(prices: number[]): number {
     for (let i = 1; i < prices.length; i++) {
         const currProfit = prices[i] - minPrice
         if(minPrice < prices[i]) minPrice = prices[i]
-        if (prices[i] < minPrice) minPrice = prices[i];
+        if(currProfit > maxProfit) maxProfit = currProfit
     }
     return maxProfit;
 }
@@ -258,7 +280,7 @@ console.log('Уникальных Чисел  ДО N=4 Повторений[0,0,
 // если это число не равно тому что ищем 
 // то записываем на новое место  
 function removeElement(nums: number[], val: number): number {
-    let k = 0; // Указатель на позицию для элементов != val
+    let k = 0; 
     
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] !== val) {
