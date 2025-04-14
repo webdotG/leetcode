@@ -41,11 +41,25 @@ const fn3 = (accum, curr) => accum + curr;
 console.log('REDUCE К Каждому Элементу Начиная с init=0 [1,3,6,9] fn = sum(accum, curr)  accum + curr; ', reduce([1, 3, 6, 9], fn3, 0));
 function compose(functions) {
     return function (x) {
-        return x;
+        let result = x;
+        for (let i = functions.length - 1; i >= 0; i--) {
+            result = functions[i](result);
+        }
+        return result;
     };
 }
 ;
 console.log('Composition Композит Функций ', compose);
+function once(fn4) {
+    let isCalling = false;
+    return function (...args) {
+        if (!isCalling) {
+            isCalling = true;
+            return fn4(...args);
+        }
+        return undefined;
+    };
+}
 //169. Majority Element-----------------------------------------------------------------------
 //надо найти мажоритарный элемент 
 // — число, которое встречается больше ⌊n / 2⌋ раз

@@ -10,7 +10,8 @@
   },
   "include": [
     "150_q_ts/**/*.ts",         
-    "base_ts/**/*.ts" ,          
+    "base_ts/**/*.ts", 
+    "class/class.ts" ,          
   ],
   "exclude": [
     "node_modules",             // Исключает node_modules

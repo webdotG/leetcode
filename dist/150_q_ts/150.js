@@ -1,6 +1,47 @@
 "use strict";
 console.log('==== 150_Q_ ========150_Q_>>===========150_Q_??================150_Q_>>================150_Q_??===============150_Q_>>=================150_Q_======>>');
 //
+//121. Best Time to Buy and Sell Stock
+// Input: prices = [7,1,5,3,6,4]
+// Output: 5
+// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+// Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+// function maxProfit(prices: number[]): number {  
+//     let minPrice = Infinity
+//     let profit = 0 
+//     for(let price of prices){
+//         if(minPrice > price) {
+//             minPrice = price
+//         }
+//         let currentProfit = price - minPrice
+//         if(currentProfit > profit) {
+//             profit = currentProfit
+//         }
+//     }
+//     return profit
+// };
+// function maxProfit(prices: number[]): number {
+//     let profit = 0;
+//     let buyPrice = prices[0];
+//     for (let i = 1; i < prices.length; i++) {
+//         profit = Math.max(profit, prices[i] - buyPrice);
+//         buyPrice = Math.min(prices[i], buyPrice);
+//     }
+//     return profit;
+// }
+function maxProfit(prices) {
+    let maxProfit = 0;
+    let minPrice = prices[0];
+    for (let i = 1; i < prices.length; i++) {
+        const currProfit = prices[i] - minPrice;
+        if (minPrice < prices[i])
+            minPrice = prices[i];
+        if (prices[i] < minPrice)
+            minPrice = prices[i];
+    }
+    return maxProfit;
+}
+console.log('MAX PROFIT FOR BY AND SALE [13,2,9,3,8,4,1,12,6,14] ', maxProfit([13, 2, 9, 3, 8, 4, 1, 12, 6, 14]));
 //88. --------------------------------------------------------------------------------- 
 // Объединение отсортированных массивов
 // Вход: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3

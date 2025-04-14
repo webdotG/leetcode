@@ -62,12 +62,32 @@ type F = (x: number) => number;
 function compose(functions: F[]): F {
     
     return function(x) {
-
-        
-        return x
+        let result = x 
+        for(let i = functions.length - 1; i >= 0; i--){
+            result = functions[i](result)
+        }
+        return result
     }
 };
 console.log('Composition Композит Функций ', compose)
+
+//2666. Allow One Function Call-------------------------------------------------------------------------------
+type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+type OnceFn = (...args: JSONValue[]) => JSONValue | undefined
+
+function once(fn4: Function): OnceFn {
+    let isCalling = false
+
+    return function (...args) {
+        if(!isCalling) {
+            isCalling = true
+            return fn4(...args) 
+        }
+        return undefined                       
+    };
+}
+
+
 //169. Majority Element-----------------------------------------------------------------------
  //надо найти мажоритарный элемент 
  // — число, которое встречается больше ⌊n / 2⌋ раз
